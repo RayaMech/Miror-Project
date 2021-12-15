@@ -1,6 +1,8 @@
 import serial
 ser = serial.Serial('/dev/ttyUSB1',9600)
 
+ser.write('110,')
+
 import time
 file = open('valeurs.csv')
 while 1:
@@ -11,3 +13,4 @@ while 1:
    time.sleep(3)
 	
 file.close
+
