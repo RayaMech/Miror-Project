@@ -39,11 +39,11 @@ Pour Y=
 #include <Servo.h>
 
 Servo actuator;
-#define hauteur +4.5874
+#define hauteur +9.5
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 void setup(){
-  actuator.attach(A8);
-  actuator.writeMicroseconds(1500.45789);
+  actuator.attach(A9);
+  actuator.writeMicroseconds(1500);
   delay(3000);
 }
 
