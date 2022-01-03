@@ -55,25 +55,25 @@ void setup(){
 //Serial.println("16 channel Servo test!");
   pwm.begin();
   pwm.setPWMFreq(60); //Analog servos run at ~60 Hz
-  pwm.writeMicroseconds(servo1,1500);
-  pwm.writeMicroseconds(servo2,1500);
+  pwm.writeMicroseconds(servo1, 1500);
+  pwm.writeMicroseconds(servo2, 1500);
   //pwm.writeMicroseconds(servo3, 1500);
   //pwm.writeMicroseconds(servo4, 1500);
   
-  pwm.writeMicroseconds(servo5,1500);
-  pwm.writeMicroseconds(servo6,1500);
-  //pwm.writeMicroseconds(servo7, 1500);
-  //pwm.writeMicroseconds(servo8, 1500);
+  pwm.writeMicroseconds(servo5, 1500);
+  pwm.writeMicroseconds(servo6, 1500);
+  pwm.writeMicroseconds(servo7, 1500);
+  pwm.writeMicroseconds(servo8, 1500);
   
-  pwm.writeMicroseconds(servo9,1500);
-  pwm.writeMicroseconds(servo10,1500);
-  //pwm.writeMicroseconds(servo11, 1500);
-  //pwm.writeMicroseconds(servo12, 1500);
+  pwm.writeMicroseconds(servo9, 1500);
+  pwm.writeMicroseconds(servo10, 1500);
+  pwm.writeMicroseconds(servo11, 1500);
+  pwm.writeMicroseconds(servo12, 1500);
   
-  //pwm.writeMicroseconds(servo13, 1500);
-  //pwm.writeMicroseconds(servo14, 1500);
-  pwm.writeMicroseconds(servo15,1500);
-  pwm.writeMicroseconds(servo16,1500);
+  pwm.writeMicroseconds(servo13, 1500);
+  pwm.writeMicroseconds(servo14, 1500);
+  pwm.writeMicroseconds(servo15, 1500);
+  pwm.writeMicroseconds(servo16, 1500);
   delay(3000);
   //yield();
 }
@@ -81,41 +81,41 @@ void setup(){
 void loop(){
   int time1 = -(50*hauteur1) + 1500;
   int time2 = -(50*hauteur2) + 1500;
-  //int time3 = -(50*hauteur3) + 1500;
-  //int time4 = -(50*hauteur4) + 1500;
+  int time3 = -(50*hauteur3) + 1500;
+  int time4 = -(50*hauteur4) + 1500;
   
   int time5 = -(50*hauteur5) + 1500;
   int time6 = -(50*hauteur6) + 1500;
-  //int time7 = -(50*hauteur7) + 1500;
-  //int time8 = -(50*hauteur8) + 1500;
+  int time7 = -(50*hauteur7) + 1500;
+  int time8 = -(50*hauteur8) + 1500;
   
   int time9 = -(50*hauteur9) + 1500;
   int time10 = -(50*hauteur10) + 1500;
-  //int time11 = -(50*hauteur11) + 1500;
-  //int time12 = -(50*hauteur12) + 1500;
+  int time11 = -(50*hauteur11) + 1500;
+  int time12 = -(50*hauteur12) + 1500;
   
-  //int time13 = -(50*hauteur13) + 1500;
-  //int time14 = -(50*hauteur14) + 1500;
+  int time13 = -(50*hauteur13) + 1500;
+  int time14 = -(50*hauteur14) + 1500;
   int time15 = -(50*hauteur15) + 1500;
   int time16 = -(50*hauteur16) + 1500;
   
   pwm.writeMicroseconds(servo1, time1);
   pwm.writeMicroseconds(servo2, time2);
-  //pwm.writeMicroseconds(servo3, time3);
-  //pwm.writeMicroseconds(servo4, time4);
+  pwm.writeMicroseconds(servo3, time3);
+  pwm.writeMicroseconds(servo4, time4);
   
   pwm.writeMicroseconds(servo5, time5);
   pwm.writeMicroseconds(servo6, time6);
-  //pwm.writeMicroseconds(servo7, time7);
-  //pwm.writeMicroseconds(servo8, time8);
+  pwm.writeMicroseconds(servo7, time7);
+  pwm.writeMicroseconds(servo8, time8);
   
   pwm.writeMicroseconds(servo9, time9);
   pwm.writeMicroseconds(servo10, time10);
-  //pwm.writeMicroseconds(servo11, time11);
-  //pwm.writeMicroseconds(servo12, time12);
+  pwm.writeMicroseconds(servo11, time11);
+  pwm.writeMicroseconds(servo12, time12);
   
-  //pwm.writeMicroseconds(servo13, time13);
-  //pwm.writeMicroseconds(servo14, time14);
+  pwm.writeMicroseconds(servo13, time13);
+  pwm.writeMicroseconds(servo14, time14);
   pwm.writeMicroseconds(servo15, time15);
   pwm.writeMicroseconds(servo16, time16);
   delay(3000);

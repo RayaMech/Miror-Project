@@ -51,7 +51,7 @@ int hauteur;
 void setup(){
   //pinMode(A9,INPUT);
   Serial.begin(9600);
-  actuator1.attach(A9); //attach the actuator to Arduino pin9
+  actuator1.attach(9); //attach the actuator to Arduino pin9
   //actuator2.attach(A8); //attach the actuator to Arduino pin6
   //actuator3.attach(A8);
   actuator1.writeMicroseconds(1900); //give the actuator a 2ms pulse to retract the arm (1000us=1ms)
