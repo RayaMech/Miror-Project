@@ -2,11 +2,12 @@
 #include <Servo.h>
 #include <Adafruit_PWMServoDriver.h>
 
-Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+Adafruit_PWMServoDriver pwm1 = Adafruit_PWMServoDriver(0x40);
+Adafruit_PWMServoDriver pwm2 = Adafruit_PWMServoDriver(0x41);
 
 #define servoMIN 150
 #define servoMAX 600
-#define servo1 0
+//#define servo1 0
 //#define servo2 13
 //#define servo3 14
 //#define servo4 15
@@ -18,9 +19,11 @@ void setup(){
   Serial.begin(9600);
 //Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 //Serial.println("16 channel Servo test!");
-  pwm.begin();
-  //pwm.setPWMFreq(60); //Analog servos run at ~60 Hz
-  pwm.writeMicroseconds(servo1, 1900);
+  pwm1.begin();
+  pwm2.begin();
+ // pwm1.setPWMFreq(60); //Analog servos run at ~60 Hz
+ // pwm2.setPWMFreq(60);
+  pwm1.writeMicroseconds(0, 1900);
   //pwm.writeMicroseconds(servo2, 1900);
   //pwm.writeMicroseconds(servo3, 1900);
   //pwm.writeMicroseconds(servo4, 1900);
@@ -29,7 +32,7 @@ void setup(){
 }
 
 void loop(){
-  pwm.writeMicroseconds(servo1, 1100);
+  pwm1.writeMicroseconds(0, 1100);
   //pwm.writeMicroseconds(servo2, 1100);
   //pwm.writeMicroseconds(servo3, 1100);
   //pwm.writeMicroseconds(servo4, 1100);
