@@ -42,29 +42,42 @@ delay(UPDATE_TIME);
 
 #include <Servo.h>
 
-#define servo1 A6
-#define servo2 A7
-#define servo3 A8
-#define servo4 A9
-
-//Servo actuator1; // create a servo object named "actuator"
+Servo actuator13;
+Servo actuator14;
+Servo actuator15;
+Servo actuator16;// create a servo object named "actuator"
 //Servo actuator2;
 //Servo actuator3;
 //int value;
-int hauteur;
+#define hauteur13 +5
+#define hauteur14 +5
+#define hauteur15 +5
+#define hauteur16 +5
+
+int time13;
+int time14;
+int time15;
+int time16;
 
 void setup(){
   //pinMode(A9,INPUT);
-  Serial.begin(9600);
-  //actuator1.attach(9); //attach the actuator to Arduino pin9
+ // Serial.begin(9600);
+  actuator13.attach(A6);
+  actuator14.attach(A7);
+  actuator15.attach(A8);
+  actuator16.attach(A9);//attach the actuator to Arduino pin9
   //actuator2.attach(A8); //attach the actuator to Arduino pin6
   //actuator3.attach(A8);
-  servo1.writeMicroseconds(1900); //give the actuator a 2ms pulse to retract the arm (1000us=1ms)
-  servo2.writeMicroseconds(1900);
-  servo1.writeMicroseconds(1900);
-  servo1.writeMicroseconds(1900);//delay(3000);
-  //actuator2.writeMicroseconds(2000);
-  //actuator3.writeMicroseconds(2000);
+  
+   int time13 = -(50*hauteur13) + 1500;
+  int time14 = -(50*hauteur14) + 1500;
+  int time15 = -(50*hauteur15) + 1500;
+  int time16 = -(50*hauteur16) + 1500;
+  
+  actuator13.writeMicroseconds(1500); //give the actuator a 2ms pulse to retract the arm (1000us=1ms)
+  actuator14.writeMicroseconds(1500);//delay(3000);
+  actuator15.writeMicroseconds(1500);//actuator2.writeMicroseconds(2000);
+  actuator16.writeMicroseconds(1500); //actuator3.writeMicroseconds(2000);
   delay(3000); //delay a few seconds to give the arm time to retract
     
 }
@@ -72,7 +85,15 @@ void setup(){
 void loop(){
    //Extend and retract the actuator arm on a 5 second interval
    
-   actuator1.writeMicroseconds(1100); //1ms pulse to extend the arm 
+   actuator13.writeMicroseconds(time13);
+   actuator14.writeMicroseconds(time14);
+   actuator15.writeMicroseconds(time15);
+   actuator16.writeMicroseconds(time16);
+   
+   actuator13.writeMicroseconds(1100);
+   actuator14.writeMicroseconds(1100);
+   actuator15.writeMicroseconds(1100);
+   actuator16.writeMicroseconds(1100); //1ms pulse to extend the arm 
  
    //int value1=actuator1.read();
    //Serial.println(value1);
@@ -94,9 +115,9 @@ void loop(){
    delay(3000); // the actuator takes>2s to extend/retract when loaded - give it plenty of time
   // exit(0);
    
-   actuator1.writeMicroseconds(1900); //2ms pulse to retract the arm
+   //actuator1.writeMicroseconds(2000); //2ms pulse to retract the arm
    //actuator2.writeMicroseconds(2000);
-   delay(3000);
+   //delay(2000);
    //Serial.println(valeur1);      // affichage de la valeur via le port série
    //Serial.println("SERVO1 ASSIS");
    //Serial.println(valeur2);      // affichage de la valeur via le port série
@@ -109,11 +130,9 @@ void loop(){
   // Serial.println("SERVO ASSIS");
    //Serial.println(value2);
    //delay(6000);
-   actuator1.writeMicroseconds(1500);
+   //actuator3.writeMicroseconds(2000);
    
-   delay(3000);
-   exit(0);
+   //delay(3000);
 }
-
 
 

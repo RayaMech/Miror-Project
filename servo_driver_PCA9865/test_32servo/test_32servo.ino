@@ -28,25 +28,25 @@ Adafruit_PWMServoDriver pwm2 = Adafruit_PWMServoDriver(0x41);
 #define servo15 14
 #define servo16 15
 
-#define hauteur1 +4.5874
-#define hauteur2 +4.5874
-#define hauteur3 +4.5874
-#define hauteur4 +4.5874
+#define hauteur1 +5
+#define hauteur2 +5
+#define hauteur3 +5
+#define hauteur4 +5
 
-#define hauteur5 +4.5874
-#define hauteur6 +4.5874
-#define hauteur7 +4.5874
-#define hauteur8 +4.5874
+#define hauteur5 +5
+#define hauteur6 +5
+#define hauteur7 +5
+#define hauteur8 +5
 
-#define hauteur9 +4.5874
-#define hauteur10 +4.5874
-#define hauteur11 +4.5874
-#define hauteur12 +4.5874
+#define hauteur9 +5
+#define hauteur10 +5
+#define hauteur11 +5
+#define hauteur12 +5
 
-#define hauteur13 +4.5874
-#define hauteur14 +4.5874
-#define hauteur15 +4.5874
-#define hauteur16 +4.5874
+#define hauteur13 +5
+#define hauteur14 +5
+#define hauteur15 +5
+#define hauteur16 +5
 
 
 uint8_t servonum = 0;
@@ -184,8 +184,8 @@ void loop(){
   delay(3000);
   */
   
-  
-   pwm1.writeMicroseconds(servo1,1500);
+  /*
+     pwm1.writeMicroseconds(servo1,1500);
   pwm1.writeMicroseconds(servo2,1500);
   pwm1.writeMicroseconds(servo3, 1500);
   pwm1.writeMicroseconds(servo4, 1500);
@@ -228,6 +228,52 @@ void loop(){
   pwm2.writeMicroseconds(servo15,1500);
   pwm2.writeMicroseconds(servo16,1500);
   
+  
+  
+  delay(3000);
+  
+     pwm1.writeMicroseconds(servo1,1500);
+  pwm1.writeMicroseconds(servo2,1500);
+  pwm1.writeMicroseconds(servo3, 1500);
+  pwm1.writeMicroseconds(servo4, 1500);
+  
+  pwm1.writeMicroseconds(servo5,1500);
+  pwm1.writeMicroseconds(servo6,1500);
+  pwm1.writeMicroseconds(servo7, 1500);
+  pwm1.writeMicroseconds(servo8, 1500);
+  
+  pwm1.writeMicroseconds(servo9,1500);
+  pwm1.writeMicroseconds(servo10,1500);
+  pwm1.writeMicroseconds(servo11, 1500);
+  pwm1.writeMicroseconds(servo12, 1500);
+  
+  pwm1.writeMicroseconds(servo13, 1500);
+  pwm1.writeMicroseconds(servo14, 1500);
+  pwm1.writeMicroseconds(servo15,1500);
+  pwm1.writeMicroseconds(servo16,1500);
+  
+  
+  pwm2.writeMicroseconds(servo1,1100);
+  pwm2.writeMicroseconds(servo2,1100);
+  pwm2.writeMicroseconds(servo3, 1100);
+  pwm2.writeMicroseconds(servo4, 1100);
+  
+  pwm2.writeMicroseconds(servo5,1100);
+  pwm2.writeMicroseconds(servo6,1100);
+  pwm2.writeMicroseconds(servo7, 1100);
+  pwm2.writeMicroseconds(servo8, 1100);
+  
+  pwm2.writeMicroseconds(servo9,1100);
+  pwm2.writeMicroseconds(servo10,1100);
+  pwm2.writeMicroseconds(servo11, 1100);
+  pwm2.writeMicroseconds(servo12, 1100);
+  
+  pwm2.writeMicroseconds(servo13, 1100);
+  pwm2.writeMicroseconds(servo14, 1100);
+  pwm2.writeMicroseconds(servo15,1100);
+  pwm2.writeMicroseconds(servo16,1100);
+  
+  */
   
   
   exit(0);
